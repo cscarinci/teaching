@@ -1,0 +1,123 @@
+#+title: Course
+#+author: Author
+#+date: Semester
+#+export_file_name: output
+:info:
+#+macro: COURSE COURSE
+#+macro: CODE CODE
+#+macro: DEPARTMENT Department
+#+macro: UNIVERSITY University
+#+macro: ACRONYM UNI
+:end:
+:class_options:
+#+options: H:5 toc:nil date:t author:t title:nil tags:nil
+#+latex_class: kaobook
+#+latex_class_options: [a4paper,fontsize=10pt,secnumdepth=1,twoside=false,numbers=noenddot,fontmethod=tex]
+#+latex_compiler: xelatex
+:end:
+:language:
+#+latex_header:
+#+latex_header: \usepackage{polyglossia}
+#+latex_header: \setmainlanguage{english}
+#+latex_header: \usepackage[english=british]{csquotes}
+#+latex_header: \usepackage[T1]{fontenc}
+#+latex_header:
+:end:
+:math:
+#+latex_header:
+#+latex_header: \let\openbox\undefined
+#+latex_header: \usepackage{amsmath,amsthm,mathtools}
+#+latex_header: \usepackage{newpxtext,newpxmath}
+#+latex_header: %\usepackage[framed=true]{kaotheorems}
+#+latex_header: %\usepackage{mdframed}
+#+latex_header:
+#+latex_header: \newtheorem{theorem}{Theorem}[section]
+#+latex_header: \newtheorem{proposition}{Proposition}[theorem]
+#+latex_header: \newtheorem{lemma}{Lemma}[theorem]
+#+latex_header: \newtheorem{corollary}{Corollary}[theorem]
+#+latex_header:
+#+latex_header: \newtheorem{question}{Question}[section]
+#+latex_header: \newtheorem{problem}{Problem}[question]
+#+latex_header: \newtheorem{conjecture}{Conjecture}[question]
+#+latex_header:
+#+latex_header: \theoremstyle{definition}
+#+latex_header: \newtheorem{definition}{Definition}[section]
+#+latex_header: \newtheorem{example}{Example}[definition]
+#+latex_header: \newtheorem{exercise}{Exercise}[section]
+#+latex_header:
+#+latex_header: \theoremstyle{remark}
+#+latex_header: \newtheorem*{note}{Note}
+#+latex_header: \newtheorem*{remark}{Remark}
+#+latex_header: \newtheorem*{solution}{Solution}
+#+latex_header:
+:end:
+:other:
+#+latex_header:
+#+latex_header: %\usepackage{showframe,showlabels}
+#+latex_header:
+#+latex_header: %\makeindex[columns=3, title=Alphabetical Index, intoc]
+#+latex_header: %\makeglossaries
+#+latex_header: %\input{glossary.tex}
+#+latex_header: %\makenomenclature
+#+latex_header:
+:end:
+:commands:
+#+macro: frontmatter \frontmatter
+#+macro: mainmatter \mainmatter
+
+#+macro: pagelayout \pagelayout{$1}
+
+#+macro: titlehead \titlehead{$1}
+#+macro: subject \subject{$1}
+#+macro: subtitle \subtitle{$1}
+#+macro: publishers \publishers{$1}
+#+macro: maketitle \maketitle
+#+macro: setmainfont \setmainfont[$1]{$2}
+
+#+macro: tableofcontents \tableofcontents
+#+macro: margintocdepth \setcounter{margintocdepth}{$1}
+
+#+macro: dedication \dedication{$1}
+
+#+macro: setchapterstyle \setchapterstyle{$1}
+#+macro: setchapterpreamble \setchapterpreamble[u]{$1}
+
+#+macro: sidenote \sidenote[$1][$2]{$3}
+#+macro: marginnote \marginnote[$1]{$2}
+#+macro: footnote \footnote{$1}
+
+#+macro: nomenclature \nomenclature{$1}{$2}
+#+macro: printnomenclature \printnomenclature
+#+macro: printindex \printindex
+:end:
+:title_extras:
+{{{titlehead({{{ACRONYM}}} -- {{{CODE}}} -- {{{DATE}}})}}}
+
+{{{subtitle({{{DEPARTMENT}}})}}}
+{{{publishers(UNIVERSITY)}}}
+:end:
+:layout:
+{{{frontmatter}}}
+{{{pagelayout(wide)}}}
+{{{maketitle}}}
+{{{tableofcontents}}}
+{{{mainmatter}}}
+{{{setchapterstyle(kao)}}}
+{{{pagelayout(wide)}}}
+:end:
+
+* Chapter
+** Section
+** Section
+
+* Chapter
+** Section
+** Section
+
+* Appendix :appendix:
+
+** Section
+
+* End Document :end:
+
+

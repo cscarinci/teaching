@@ -1,0 +1,79 @@
+#+TITLE: CODE -- COURSE
+#+AUTHOR: Carlos Scarinci
+#+EMAIL: cscarinci@dgist.ac.kr
+#+DATE: Due: Date Day Time
+#+EXPORT_FILE_NAME: output
+#+MACRO: ASSIGNMENT Assignment
+:LATEX_SETUP:
+#+LATEX_CLASS: exam
+#+LATEX_CLASS_OPTIONS: [10pt,addpoints]
+#+LATEX_COMPILER: xelatex
+#+OPTIONS: toc:nil date:nil author:nil title:nil
+:END:
+:LATEX_PACKAGES:
+#+LATEX_HEADER: %\usepackage{showframe}
+#+LATEX_HEADER: \usepackage{amsmath, amsthm, amssymb, mathtools, dsfont}
+#+LATEX_HEADER: \usepackage{graphicx, wrapfig, subfig, float}
+#+LATEX_HEADER: \usepackage{listings, color, inconsolata, pythonhighlight}
+#+LATEX_HEADER: \usepackage[a4paper,left=2cm, right=2cm, bottom=2cm, top=2cm, headsep=0.5cm]{geometry}
+#+LATEX_HEADER:\usepackage[linecolor=black,linewidth=1pt,leftmargin=-1.7em,rightmargin=0em]{mdframed}
+#+LATEX_HEADER: \usepackage{newpxtext, newpxmath, inconsolata}
+:END:
+:PAGE_STYLE:
+\pagestyle{headandfoot}
+\firstpageheadrule
+\firstpageheader{{{{ASSIGNMENT}}}}{{{{TITLE}}}}{{{{DATE}}}}
+\runningheadrule
+\runningheader{{{{ASSIGNMENT}}}}{{{{TITLE}}}}{{{{DATE}}}}
+\firstpagefootrule
+\firstpagefooter{}{\thepage\ / \numpages}{}
+\runningfootrule
+\runningfooter{}{\thepage\ / \numpages}{}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+\pointsinleftmargin
+\marginpointname{points}
+:END:
+
+#+begin_center
+*Instructions*
+#+end_center
+1. Instruction 1
+2. Instruction 2
+3. Instruction 3
+4. Instruction 4
+   
+#+LATEX:\qformat{\hspace{1em}\textbf{Question \thequestion}\hfill (\totalpoints points)}
+#+begin_questions
+
+\question[15]
+#+begin_mdframed
+
+Question
+
+#+begin_parts
+\begin{minipage}{0.5\textwidth}
+\part
+
+Part
+
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\part
+
+Part
+
+\end{minipage}
+#+end_parts
+*Hint*: Hint
+
+#+end_mdframed
+
+
+#+begin_solution
+
+Solution
+
+#+end_solution
+#+end_questions
+\end{document}
